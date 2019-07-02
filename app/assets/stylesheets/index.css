@@ -1,0 +1,50 @@
+body{
+    background-color: rgb(183, 188, 189);
+}
+.main{
+    padding-top: 32px;
+    width: 100%;
+    justify-content: center; 
+}
+.header{ 
+    position: fixed;
+    background-color: aqua; 
+    width: 100%;
+    height: 32px;
+    top:0;
+    left: 0;
+}
+.image{
+    float: right;
+}
+.flexContainer{
+    display: flex;
+    align-items: baseline;
+}
+.profile{
+    width: 200px;
+    height: 150px;
+    margin-right: 5px;
+    background-color: rgb(255, 255, 255);
+}
+.tweets div{
+    /*文章の長さで変わるように変更する*/
+    width: 500px;
+    margin-top: 2px;
+    background-color: rgb(255, 255, 255);
+}
+.tweetScale{
+    position: absolute;
+    z-index: 1;
+    width: 60vw;
+    height: 60vh;
+    top:0;
+    left: 0;
+    border: solid rgba(73, 73, 73, 0.493);
+    background: rgb(255, 255, 255);
+    background-clip: content-box;
+}
+.closeButton{
+    text-align: right;
+}
+

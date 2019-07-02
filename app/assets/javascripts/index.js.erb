@@ -1,0 +1,18 @@
+function showTweet(){
+    var ratio = 0.2;
+    var width = window.innerWidth * ratio;
+    var height = window.innerHeight * ratio;
+    $(".main").before('<div class="tweetScale"></div>');
+    $(".tweetScale").css({
+        'border-top-width'   :height,
+        'border-bottom-width':height,
+        'border-left-width'  :width,
+        'border-right-width' :width
+    })
+    $(".tweetScale").prepend($('.tweet').text());
+    $(".tweetScale").prepend('<div class="closeButton"></div>');
+    $(".closeButton").prepend('<button type="button" onclick="closeTweet()">&times;</button>');
+}
+function closeTweet(){
+    $('.tweetScale').remove();
+}
