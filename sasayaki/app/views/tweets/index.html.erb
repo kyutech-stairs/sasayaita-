@@ -1,0 +1,8 @@
+<h1>ささやいたー</h1>
+
+<%= link_to  "ささやく", new_tweet_path %>
+
+<% @tweets.each do |tweet| %>
+  <p><%= tweet.body %></p>
+  <%= link_to 'Show', tweet %>
+<% end %>

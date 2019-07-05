@@ -1,0 +1,10 @@
+<h1>Show a tweet</h1>
+
+<h3><%= @tweet.body %></h3>
+<p><%= @tweet.updated_at %><p>
+<%= link_to  "戻る", tweets_path %>
+
+<!-- ADD -->
+<%= link_to  "ささやく", edit_tweet_path(@tweet) %>
+<%= link_to 'Destroy', @tweet, method: :delete, data: { confirm: 'Are you sure?' } %>
+<!-- ADD -->
