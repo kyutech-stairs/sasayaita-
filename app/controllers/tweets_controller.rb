@@ -3,7 +3,7 @@ class TweetsController < ApplicationController
     def index
         @tweets = Tweet.all
     end
-    
+    #idからデータを探して取得
     def show
         @tweet = Tweet.find_by(id: params[:id])
     end

@@ -1,18 +1,30 @@
 <div class="header">
-    <%= link_to new_tweet_path , class: "image" do %>
-        <%= image_tag "tweet.png" %>
-    <% end %>
+    <div>
+        <Button class="tweetButton" onclick = newTweet()>
+            <%= image_tag "tweet.png"%>
+        </Button>
+    </div>
 </div>
 
 <div class="main flexContainer">
+<!--
     <div class="profile">    
         profile
     </div>
-
+-->
     <div class="tweets">
         <% @tweets.each do |tweet| %>
-            <div class = "tweet" onclick = showTweet()>
-                <%= tweet.body %>
+            <div class = "tweet flexContainer">
+                <div class="userPic">
+                    <%= image_tag "tweet.png" %>
+                </div>
+                <div class="tweetBody">
+                    <div class="userName">name</div>
+                    <div class= <%= tweet.id %> id="text"><%= tweet.body %></div>
+                    <div class="reactionButtons">
+                        <Button class="like" onclick="likeButton()">&#9829</Buttom>
+                    </div>
+                </div>
             </div>
         <% end %>
     </div>
