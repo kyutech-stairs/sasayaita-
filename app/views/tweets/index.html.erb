@@ -1,9 +1,23 @@
 <div class="header">
     <div>
         <Button class="tweetButton" onclick = newTweet()>
-            <%= image_tag "tweet.png"%>
+            ツイート
         </Button>
     </div>
+</div>
+
+<div class="newTweet">
+    <%= form_with(model: @tweet, local: true, class: "tweetForm") do |form| %>
+        <div class="closeButton">
+            <button type="button" onclick=closeNewTweet()>&times;</button>
+        </div>
+ 
+        <%= form.text_field :body, :placeholder => "ツイートを入力", :class => 'tweetarea'%>
+  
+        <div class="inputButton">
+            <%= form.submit%>
+        </div>
+    <% end %>
 </div>
 
 <div class="main flexContainer">

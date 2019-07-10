@@ -18,22 +18,19 @@ function newTweet(){
     var ratio = 0.2;
     var width = window.innerWidth * ratio;
     var height = window.innerHeight * ratio;
-    $(".main").before('<div class="newTweet"></div>');
     $(".newTweet").css({
         'border-top-width'   :height,
         'border-bottom-width':height,
         'border-left-width'  :width,
-        'border-right-width' :width
-    })
-    $(".newTweet").prepend('<form class="tweetForm"><textarea name="tweet" class="tweetarea" placeholder="ツイートを入力"></textarea><br><div class="inputButton"><input type="submit" value="ツイート"></div></form>');
-    $(".newTweet").prepend('<div class="closeButton"></div>');
-    $(".closeButton").prepend('<button type="button" onclick="closeNewTweet()">&times;</button>');
+        'border-right-width' :width,
+        'display'            :'block'
+    })  
 }
 function closeTweet(){
     $('.tweetScale').remove();
 }
 function closeNewTweet(){
-    $('.newTweet').remove();
+    $('.newTweet').css({'display':'none'});
 }
 function likeButton(){
     $('.like').css({'color':'color: rgb(255, 57, 156)'});

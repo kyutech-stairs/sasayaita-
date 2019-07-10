@@ -2,6 +2,7 @@ class TweetsController < ApplicationController
     #Tweetテーブルからすべてのデータを持ってくる
     def index
         @tweets = Tweet.all
+        @tweet = Tweet.new
     end
     #idからデータを探して取得
     def show
