@@ -1,5 +1,6 @@
 body{
     background-color: rgb(183, 188, 189);
+    background:repeating-linear-gradient(#2277A5 0, #2277A5 60px, #E3FCF8 60px, #E3FCF8 110px);
 }
 .main{
     padding-top: 32px;
